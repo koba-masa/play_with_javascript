@@ -1,0 +1,8 @@
+table {
+  table-layout: auto;
+  border: 1px solid;
+}
+
+th,td {
+  border: 1px solid;
+}

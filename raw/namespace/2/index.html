@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>namespace</title>
+  <meta charset="utf-8">
+  <script src="/namespace/js/multiple.js"></script>
+  <script src="/namespace/js/single.js"></script>
+  <link rel="stylesheet" href="/css/common.css">
+</head>
+<body onLoad="displaySingle();">
+  <h1>namespace2</h1>
+  <table>
+    <thead>
+      <tr><th></th><th>更新1</th><th>更新2</th><th>表示</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>single.js</th>
+        <td><button onClick="updateAtSingle('namespace2', 'namespace2');">更新</button></td>
+        <td><button onClick="updateAtSingle2('namespace2', 'namespace2');">更新</button></td>
+        <td><button onClick="displaySingle()">表示</button></td>
+      </tr>
+      <tr>
+        <th>multiple.js</th>
+        <td><button onClick="updateAtMultiple('namespace2', 'namespace2');">更新</button></td>
+        <td><button onClick="updateAtMultiple2('namespace2', 'namespace2');">更新</button></td>
+        <td><button onClick="displayMultiple()">表示</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <table id="namespace">
+    <thead>
+      <tr>
+        <th></th><th>multiple_var</th><th>single_var</th><th>local_var</th><th>multiple_const</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+</body>
+</html>
