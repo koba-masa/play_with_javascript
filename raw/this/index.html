@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>this</title>
+  <meta charset="utf-8">
+  <script src="/js/common.js"></script>
+  <script src="/this/js/no_strict.js" async></script>
+  <script src="/this/js/strict.js" async></script>
+  <link rel="stylesheet" href="/css/common.css">
+</head>
+<body onLoad="functionNoStrict();functionStrict();">
+  <h1>this</h1>
+  <table>
+    <thead><tr><th></th><th>!strictモード</th><th>strictモード</th></tr></thead>
+    <tbody>
+      <tr id="global_context">
+        <th>グローバルコンテキスト</th>
+        <td class="no_strict"></td>
+        <td class="strict"></td>
+      </tr>
+      <tr id="function">
+        <th>関数コンテキスト</th>
+        <td class="no_strict"></td>
+        <td class="strict"></td>
+      </tr>
+      <tr id="class">
+        <th>クラスコンテキスト</th>
+        <td class="no_strict">-</td>
+        <td class="strict">-</td>
+      </tr>
+      <tr id="eval">
+        <th>eval</th>
+        <td colspan="2">省略</td>
+      </tr>
+    </tbody>
+  </table>
+
+  参考：<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/this">this</a>
+  <h2>よくわかっていないこと</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/this#%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88">クラスのthis</a></li>
+    <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a>/<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></li>
+    <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a></li>
+    <li></li>
+  </ul>
+</body>
+</html>
