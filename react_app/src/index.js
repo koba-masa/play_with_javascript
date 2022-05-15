@@ -8,7 +8,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = {
+      date: new Date(),
+      counter: 0
+    };
   }
 
   // 出力が DOM にレンダーされた後に実行される
@@ -38,6 +41,9 @@ class Clock extends React.Component {
     this.setState({
       date: new Date()
     });
+    console.log("before", this.state.counter)
+    this.setState({counter: this.state.counter + 1});
+    console.log("after", this.state.counter)
   }
 }
 
