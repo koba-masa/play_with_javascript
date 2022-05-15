@@ -5,11 +5,23 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
 class Clock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {date: new Date()};
+  }
+
+  // 出力が DOM にレンダーされた後に実行される
+  componentDidMount() {
+    // 1000ミリ秒ごとにtick関数を呼び出す
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
   }
 
   render() {
@@ -20,13 +32,16 @@ class Clock extends React.Component {
       </div>
     );
   }
+
+  // 呼び出されるたびにstateのdateを更新する
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
 }
 
-function tick() {
-  root.render(<Clock />);
-}
-
-setInterval(tick, 1000);
+root.render(<Clock />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
