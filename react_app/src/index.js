@@ -16,14 +16,20 @@ function formatDate(date) {
   return date.toLocaleDateString();
 }
 
+function Avatar(props) {
+  return (
+    <img className="Avatar"
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    />
+  );
+}
+
 function Comment(props) {
   return (
     <div className="Comment">
       <div className="UserInfo">
-        <img className="Avatar"
-          src={props.author.avatarUrl}
-          alt={props.author.name}
-        />
+        <Avatar user={props.author} />
         <div className="UserInfo-name">
           {props.author.name}
         </div>
