@@ -42,10 +42,12 @@ class Clock extends React.Component {
       date: new Date()
     });
     console.log("before", this.state.counter);
+    const local_counter = this.state.counter + 1;
     this.setState((state, props) => ({
-      counter: state.counter + 1
+      counter: local_counter
     }));
     console.log("after", this.state.counter);
+    console.log("after2", local_counter);
   }
 }
 
