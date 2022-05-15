@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
-const element = <Welcome name="Sara" />;
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+
+const element = <App />;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(element);
 
