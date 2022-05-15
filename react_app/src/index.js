@@ -41,11 +41,11 @@ class Clock extends React.Component {
     this.setState({
       date: new Date()
     });
-    console.log("before", this.state.counter)
+    console.log("before", this.state.counter);
     this.setState((state, props) => ({
       counter: state.counter + 1
     }));
-    console.log("after", this.state.counter)
+    console.log("after", this.state.counter);
   }
 }
 
