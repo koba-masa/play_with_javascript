@@ -26,7 +26,7 @@ function Avatar(props) {
 }
 
 function UserInfo(props) {
-  const element = (
+  return (
     <div className="UserInfo">
       <Avatar user={props.user} />
       <div className="UserInfo-name">
@@ -34,8 +34,6 @@ function UserInfo(props) {
       </div>
     </div>
   );
-  props.user = "hoge";
-  return element;
 }
 
 function Comment(props) {
@@ -48,7 +46,6 @@ function Comment(props) {
       <div className="Comment-date">
         {formatDate(props.date)}
       </div>
-      <UserInfo user={props.author} />
     </div>
   );
 }
