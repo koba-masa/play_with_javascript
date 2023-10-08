@@ -19,6 +19,9 @@ function initMap() {
     var latlng_ins = new google.maps.LatLng(latlng.lat, latlng.lng);
     new google.maps.Marker({position: latlng_ins, map: map,});
   });
+
+  var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
 
 window.initMap = initMap;
