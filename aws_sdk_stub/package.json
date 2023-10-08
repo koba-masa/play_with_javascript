@@ -11,5 +11,8 @@
   "devDependencies": {
     "aws-sdk-js-codemod": "^0.18.3",
     "jest": "^29.7.0"
+  },
+  "scripts": {
+    "aws-sdk-js-codemod": "npx aws-sdk-js-codemod"
   }
 }
