@@ -1,0 +1,19 @@
+{
+  "name": "aws_sdk_stub",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-codepipeline": "^3.427.0",
+    "@aws-sdk/client-ecs": "^3.427.0",
+    "add": "^2.0.6",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "aws-sdk-js-codemod": "^0.18.3",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "aws-sdk-js-codemod": "npx aws-sdk-js-codemod"
+  }
+}
